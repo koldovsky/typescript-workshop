@@ -72,7 +72,7 @@ var greetings = "Hello World!";
 document.body.innerHTML = greetings;
 ```
 As you can see, data type has been removed and also syntax converted to classical JavaScript because by default 
-TypeScript compiler outputs to ES5 standard of the language.
+TypeScript compiler outputs to ES3 standard of the language.
 
 ### Run http-server and open web page in a browser
 
