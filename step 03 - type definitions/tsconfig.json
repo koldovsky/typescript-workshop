@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "watch": true,
+        "noEmitOnError": true
+    },
+    "files": [
+        "index.ts"
+    ]
+}

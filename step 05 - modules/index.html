@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript ToDo</title>
+</head>
+<body>
+    <h1>Ultimate ToDo List</h1>
+    <h2>Tasks:</h2>
+    <ul id="task-list"></ul>
+    <h3>New task:</h3>
+    <form>
+        <label for="task-priority">Priority:</label>
+        <input type="text" id="task-priority">
+        <label for="task-title">Title:</label>
+        <input type="text" id="task-title">
+        <button id="btn-add">Add</button>
+    </form>
+    <script src="node_modules\systemjs\dist\system-polyfills.js"></script>
+    <script src="node_modules\systemjs\dist\system.js"></script>
+    <script>
+        SystemJS.config({
+            baseURL: '.',
+            defaultJSExtensions: true,
+            map: {
+                jquery: 'node_modules/jquery/dist/jquery.js'
+            }
+        });
+        SystemJS.import('dist/index.js');
+    </script>
+</body>
+</html>

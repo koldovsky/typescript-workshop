@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "watch": true,
+        "noEmitOnError": true,
+        "experimentalDecorators": true,
+        "target": "es5"
+    },
+    "files": [
+        "index.ts"
+    ]
+}

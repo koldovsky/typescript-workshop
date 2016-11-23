@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "watch": true,
+        "noEmitOnError": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "baseUrl": ".", // This must be specified if "paths" is.
+        "paths": {
+            "jquery": ["node_modules/jquery/dist/jquery"]
+        },
+        "outDir": "./dist/"
+    },
+    "include": [
+        "./src/*.ts"
+    ]    
+}
