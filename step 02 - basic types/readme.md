@@ -43,7 +43,7 @@ document.getElementById('btn-add').addEventListener('click', e => {
     });
     let domString = '';
     tasks.forEach(t => {
-        domString += `<li>Priority: ${t.priority}, Title: ${t.title}, Completed: ${t.completed}</li>`;
+        domString += `<li>Priority: ${t.priority}, Title: ${t.title}</li>`;
     });
     document.getElementById('task-list').innerHTML = domString;
 });
@@ -70,6 +70,7 @@ document.getElementById('btn-add').addEventListener('click', e => {
     document.getElementById('task-list').innerHTML = domString;
 });
 ````
+
 ## IV. Create interface
 Interface helps us to ensure that array contains now exact data types that are expected. 
 Let's create interface `Task`. 
@@ -106,14 +107,12 @@ Let's convert interface to class, it gives us more control on the each task:
 class Task {
     private priority: number;
     private title: string;
-    private completed: boolean;
-    constructor(priority: number, title: string, completed: boolean) {
+    constructor(priority: number, title: string) {
         this.priority = priority;
         this.title = title;
-        this.completed = completed;
     }
     toString(): string {
-        return `Priority: ${this.priority}, Title: ${this.title}, Completed: ${this.completed}`;         
+        return `Priority: ${this.priority}, Title: ${this.title}`;         
     }
 }
 
@@ -121,8 +120,7 @@ let tasks: Task[] = [];
 document.getElementById('btn-add').addEventListener('click', e => {
     e.preventDefault();
     const task = new Task(Number(document.getElementById('task-priority')['value']), 
-                          String(document.getElementById('task-title')['value']),
-                          Boolean(document.getElementById('task-completed')['checked']));
+                          String(document.getElementById('task-title')['value']));
     tasks.push(task);
     let domString = '';
     tasks.forEach(t => {
@@ -139,14 +137,12 @@ equal to 1 and also create factory that will produce right Task for us using sta
 class Task {
     private priority: number;
     private title: string;
-    private completed: boolean;
-    constructor(priority: number, title: string, completed: boolean) {
+    constructor(priority: number, title: string) {
         this.priority = priority;
         this.title = title;
-        this.completed = completed;
     }
     toString(): string {
-        return `Priority: ${this.priority}, Title: ${this.title}, Completed: ${this.completed}`;         
+        return `Priority: ${this.priority}, Title: ${this.title}`;         
     }
 }
 
@@ -157,11 +153,11 @@ class HighPriorityTask extends Task {
 }
 
 class TaskFactory {
-    static getTask(priority: number, title: string, completed: boolean): Task {
+    static getTask(priority: number, title: string): Task {
         if (priority === 1) {
-            return new HighPriorityTask(priority, title, completed);
+            return new HighPriorityTask(priority, title);
         } else {
-            return new Task(priority, title, completed);
+            return new Task(priority, title);
         }
     } 
 }
@@ -170,8 +166,7 @@ let tasks: Task[] = [];
 document.getElementById('btn-add').addEventListener('click', e => {
     e.preventDefault();
     const task = TaskFactory.getTask(Number(document.getElementById('task-priority')['value']), 
-                          String(document.getElementById('task-title')['value']),
-                          Boolean(document.getElementById('task-completed')['checked']));
+                          String(document.getElementById('task-title')['value']));
     tasks.push(task);
     let domString = '';
     tasks.forEach(t => {
@@ -180,5 +175,3 @@ document.getElementById('btn-add').addEventListener('click', e => {
     document.getElementById('task-list').innerHTML = domString;
 });
 ```
-
-
