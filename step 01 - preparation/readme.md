@@ -19,7 +19,7 @@ latest version of Visual Studio Code (1.7.1)
 npm install -g http-server
 ````
 
-### 3. Install TypeScript
+### 4. Install TypeScript
 ```
 npm install -g typescript
 ```
