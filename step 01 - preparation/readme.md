@@ -1,7 +1,7 @@
 # Intro
 
 This is practice-first introduction into TypeScript 2.0 language brought to you by [programming mentor](http://programmingmentor.com).
-Each step continues on files created as result of previous step. For your convenience  
+Each step continues on files created as result of previous step. 
 
 # Step 01 - Prepare environment. Create 'Hello World'. Basic configuration and debugging
 
