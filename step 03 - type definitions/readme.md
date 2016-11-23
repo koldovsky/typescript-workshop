@@ -2,7 +2,7 @@
 
 Let's add jQuery to our project.
 
-## Add jQuery to HTML
+## I. Add jQuery to HTML
 We will use jQuery CDN to 
 
 Add this line to index.html just before link to index.js: 
@@ -13,7 +13,7 @@ from `index.html`:
 <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 ...
 ```
-## Create `package.json`
+## II. Create `package.json`
 Then we will create `package.json` file with this command:
 
 in `console`:
@@ -22,7 +22,7 @@ npm init
 ````
 provide URL-friendly name like `ultimate-task-list`
 
-## Install *jQuery typings* and add reference
+## III. Install *jQuery typings* and add reference
 
 We need to install type definition file for jQuery:
 
@@ -40,7 +40,7 @@ Add reference path to reference library at the beginning of the `index.ts`:
  ...
 ```
 
-## Refactor code
+## IV. Refactor code
 Next we will refactor code with jQuery:
 
 `index.ts`:
@@ -89,7 +89,7 @@ $('#btn-add').click(function(e) {
 });
 ````
 
-## Fix the bug with correct data type
+## V. Fix the bug with correct data type
 
 But there is a bug here: if you type value for priority field equal to *1* it won't work the right way, 
 this task won't be marked as high priority.
@@ -141,7 +141,7 @@ const task = TaskFactory.getTask(Number($('#task-priority').val()), $('#task-tit
 ...                       
 ```                    
 
-## Final code
+## VI. Final code
 
 Our final code for this task will look like:
 

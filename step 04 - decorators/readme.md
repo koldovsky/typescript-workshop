@@ -1,6 +1,6 @@
 # Step 04 - Decorators
 
-## Preparation
+## I. Preparation
 
 At this step we will add decorators to our project
 
@@ -36,7 +36,7 @@ So, let's make modifications, our `tsconfig.json` will look like:
 }
 ```
 
-## Creating decorator
+## II. Creating decorator
 
 We will create decorator for method named `DOMElement`, it will be parameterized decorator that
 accepts element name as parameter and wraps return value of a method into it.
@@ -59,6 +59,8 @@ function DOMElement(value: string): any {
 ...
 ```
 
+## III. Applying decorator
+
 We will apply decorator to method `.toString()` in our classes, also we will remove manual creation
 of elements in the code. 
 
@@ -71,6 +73,8 @@ This is how decorated method will look like:
     }
 ```
 As you can see, we removed generated elements from method, now this work is done by decorator
+
+## IV. Final code
 
 So our final `index.ts` will look like this:
 

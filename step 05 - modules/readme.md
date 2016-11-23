@@ -49,7 +49,7 @@ Our `tsconfig.json` will look like this:
 }
 ```
 
-## II. Split `index.ts` into mutiple files
+## II. Split `index.ts` into multiple files
 
 Then we will split our `index.ts` into several files and put them into `src` folder.
 
@@ -195,6 +195,3 @@ Our `index.html` will look like:
 </body>
 </html>
 ```
-
-
-
